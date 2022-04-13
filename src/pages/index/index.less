@@ -1,56 +1,125 @@
 page {
-  background-color: white;
-  padding         : 14px;
-  box-sizing      : border-box;
-  color           : #333;
+  background-color   : white;
+  // padding         : 14px;
+  box-sizing         : border-box;
+  color              : #000;
+
+  /* 定义变量 */
+  --bgColor: #fff;
+
+  /* rgba的四个值分别为：红(R)、绿(G)、蓝(B)、透明度(A) */
+  --whiteShadow: -15px -15px 25px #f9f9f9;
+  --blackShadow: 15px 15px 25px #e0e0e0;
+
 }
 
-.wrapper {
-  display       : flex;
-  flex-direction: column;
+.bg-img {
+  position: absolute;
+  top     : 0;
+  left    : 0;
+  width   : 100%;
+  height  : 100%;
 }
+
+.header-bg {
+  width              : 100%;
+  height             : 250rpx;
+  // background-image: linear-gradient(180deg, #fff 0%, #f9f9f9 100%);
+  background-color   : #fff;
+  position           : relative;
+  display            : flex;
+  align-items        : center;
+  justify-content    : center;
+
+  // &:after {
+  //   background-color: #fff;
+  //   content         : '';
+  //   width           : 100%;
+  //   height          : 300rpx;
+  //   position        : absolute;
+  //   left            : -30%;
+  //   top             : 0;
+  //   z-index         : -1;
+  //   border-radius   : 0 0 50% 50%;
+  //   box-shadow      : 0rpx 0rpx 30rpx 20rpx #f3f3f3
+  // }
+}
+
+.add-input-cls {
+  position         : absolute;
+  top              : 230rpx;
+  left             : 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform    : translate(-50%, -50%);
+  transform        : translate(-50%, -50%);
+  width            : 76vw;
+  height           : 90rpx;
+  border-radius    : 20rpx;
+  background       : linear-gradient(145deg, #d9dbdd, #ffffff);
+  box-shadow       : 6px 6px 18px #c6c7ca,
+    -6px -6px 18px #ffffff;
+  display        : flex;
+  justify-content: flex-start;
+  align-items    : center;
+  padding        : 0 30rpx;
+
+  // width           : 30vh;
+  // height          : 30vh;
+  // margin          : 45px;
+  // background-color: var(--bgColor);
+  // border-radius   : 30px;
+  // box-shadow      : inset var(--blackShadow),
+  //   inset var(--whiteShadow);
+}
+
+.wrapper-main {
+  // background-image: url('../../images/bg_main.png');
+}
+
+// .wrapper {
+//   display       : flex;
+//   flex-direction: column;
+// }
 
 .logo {
-  display: block;
-  width  : 270px;
-  height : 270px;
-  margin : 0 auto;
+  width    : 100vw;
+  // height: auto;
 }
 
-.title,
-.desc {
-  text-align: center;
-  font-size : 32px;
-}
+// .title,
+// .desc {
+//   text-align: center;
+//   font-size : 32px;
+// }
 
-.desc {
-  margin   : 20px 0;
-  font-size: 28px;
-  color    : rgba(0, 0, 0, .85);
-}
+// .desc {
+//   margin   : 20px 0;
+//   font-size: 28px;
+//   color    : rgba(0, 0, 0, .85);
+// }
 
-.list {
-  padding     : 24px 0;
-  font-size   : 32px;
-  display     : flex;
-  align-items : center;
-  border-color: rgba(51, 51, 51, .1);
-  border-style: solid;
-  border-width: 1px 0 1px 0;
-}
+// .list {
+//   padding     : 24px 0;
+//   font-size   : 32px;
+//   display     : flex;
+//   align-items : center;
+//   border-color: rgba(51, 51, 51, .1);
+//   border-style: solid;
+//   border-width: 1px 0 1px 0;
+// }
 
-.list:not(:first-child) {
-  border-top-width: 0;
-}
+// .list:not(:first-child) {
+//   border-top-width: 0;
+// }
 
-.label {
-  flex: 0.4;
-}
+// .label {
+//   flex: 0.4;
+// }
 
-.button {
-  display         : block;
-  width           : 100%;
-  background-color: transparent;
-  border-radius   : 2px;
-  margin-top      : 20px;
-}
+// .button {
+//   display         : block;
+//   width           : 100%;
+//   background-color: transparent;
+//   border-radius   : 2px;
+//   margin-top      : 20px;
+// }
