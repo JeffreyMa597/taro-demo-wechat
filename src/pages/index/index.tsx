@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { View, Button, Input, Image } from '@tarojs/components';
+import { View, Button, Input, Image, ScrollView } from '@tarojs/components';
 // import { Button, Cell, Icon } from '@nutui/nutui-taro';
 // import { useEnv, useNavigationBar, useModal, useToast } from 'taro-hooks';
 // import bgMain from '../../images/bg_main.png';
@@ -9,6 +9,18 @@ import headerBg from '../../images/header.png';
 import './index.less';
 
 const Index = () => {
+  const mockData = {
+    time: '2022/04/14',
+    category: 1, // 1 线下  2 线上
+    address: '腾讯会议'
+  };
+
+  const arrData: any[] = [];
+  for (let i = 0; i < 30; i++) {
+    arrData.push(JSON.parse(JSON.stringify(mockData)));
+  }
+
+  console.log(arrData, 'arrData');
   // const env = useEnv();
   // const [_, { setTitle }] = useNavigationBar({ title: 'Taro Hooks' });
   // const [show] = useModal({
@@ -26,30 +38,24 @@ const Index = () => {
   //   });
   // }, [show, showToast]);
 
-  const bgStyle = {
-    // backgroundImage: 'url(' + require('../../images/bg_main.png') + ')',
-    // backgroundImage: `url(${require('../../images/bg_main.png')})`,
-    // backgroundImage: 'url(' + `${bgTop}` + ')',
-    // backgroundImage:
-    //   'url(https://hbimg.huabanimg.com/cc47ebcb05326b4282778c19f2bd523e96ed251240305-DqVF7O_fw658/format/webp)',
-    // backgroundColor: '#e9e9e9',
-    // width: '100vw',
-    // height: '30vh',
-    // display: 'flex',
-    // justifyContent: 'center',
-    // alignItems: 'center'
-  };
-
   return (
     <View className='wrapper-main'>
       <Image className='bg-img' src={headerBg} mode='aspectFill' />
-      <View className='header-bg' style={bgStyle}>
+      <View className='content'>
+        <View className='header-bg'></View>
         <View className='add-input-cls'>
           <Input
             style={{ width: '100%', fontSize: '28rpx' }}
             cursor={1000}
             placeholder='2022/4/13 23:38 线上 腾讯会议'
           />
+        </View>
+        <View className='scroll-box'>
+          <ScrollView scrollY enableFlex className='scrollview'>
+            {arrData.map(item => (
+              <View className='item-cls'>{item.time}</View>
+            ))}
+          </ScrollView>
         </View>
       </View>
       {/* <Image className='logo' src={bgMain} /> */}

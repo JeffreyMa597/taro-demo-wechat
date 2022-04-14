@@ -1,8 +1,11 @@
 page {
+  width              : 100%;
+  height             : 100%;
   background-color   : white;
   // padding         : 14px;
   box-sizing         : border-box;
   color              : #000;
+  font-size          : 26rpx;
 
   /* 定义变量 */
   --bgColor: #fff;
@@ -19,13 +22,14 @@ page {
   left    : 0;
   width   : 100%;
   height  : 100%;
+  z-index : -1;
 }
 
 .header-bg {
   width              : 100%;
-  height             : 250rpx;
+  height             : 30vh;
   // background-image: linear-gradient(180deg, #fff 0%, #f9f9f9 100%);
-  background-color   : #fff;
+  background-color   : none;
   position           : relative;
   display            : flex;
   align-items        : center;
@@ -45,23 +49,27 @@ page {
   // }
 }
 
+.content {
+  position          : relative;
+  display           : flex;
+  flex-direction    : column;
+  align-items       : center;
+  // justify-content: center;
+  height            : 100%;
+
+}
+
 .add-input-cls {
-  position         : absolute;
-  top              : 230rpx;
-  left             : 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform    : translate(-50%, -50%);
-  transform        : translate(-50%, -50%);
-  width            : 76vw;
-  height           : 90rpx;
-  border-radius    : 20rpx;
-  background       : linear-gradient(145deg, #d9dbdd, #ffffff);
-  box-shadow       : 6px 6px 18px #c6c7ca,
-    -6px -6px 18px #ffffff;
-  display        : flex;
-  justify-content: flex-start;
-  align-items    : center;
-  padding        : 0 30rpx;
+  width               : 76vw;
+  height              : 90rpx;
+  border-radius       : 20rpx;
+  background          : linear-gradient(145deg, #d9dbdd, #ffffff);
+  // box-shadow       : 6px 6px 18px #c6c7ca,
+  //   -6px -6px 18px #ffffff;
+  display             : flex;
+  justify-content     : flex-start;
+  align-items         : center;
+  padding             : 0 30rpx;
 
   // width           : 30vh;
   // height          : 30vh;
@@ -72,54 +80,31 @@ page {
   //   inset var(--whiteShadow);
 }
 
+.scroll-box {
+  flex   : 1;
+  color  : #a0a0a0;
+  height : 30vh;
+  padding: 30rpx 0;
+  width  : 100%;
+
+  .scrollview {
+    width : 100%;
+    height: 100%;
+
+    .item-cls {
+      background-color: #fff;
+      margin          : 20rpx 0;
+      padding         : 0 20rpx;
+      width           : 100%;
+      height          : 100rpx;
+      width           : 84vw;
+      height          : 100rpx;
+      border-radius   : 20rpx;
+    }
+  }
+}
+
+
 .wrapper-main {
-  // background-image: url('../../images/bg_main.png');
+  height: 100%;
 }
-
-// .wrapper {
-//   display       : flex;
-//   flex-direction: column;
-// }
-
-.logo {
-  width    : 100vw;
-  // height: auto;
-}
-
-// .title,
-// .desc {
-//   text-align: center;
-//   font-size : 32px;
-// }
-
-// .desc {
-//   margin   : 20px 0;
-//   font-size: 28px;
-//   color    : rgba(0, 0, 0, .85);
-// }
-
-// .list {
-//   padding     : 24px 0;
-//   font-size   : 32px;
-//   display     : flex;
-//   align-items : center;
-//   border-color: rgba(51, 51, 51, .1);
-//   border-style: solid;
-//   border-width: 1px 0 1px 0;
-// }
-
-// .list:not(:first-child) {
-//   border-top-width: 0;
-// }
-
-// .label {
-//   flex: 0.4;
-// }
-
-// .button {
-//   display         : block;
-//   width           : 100%;
-//   background-color: transparent;
-//   border-radius   : 2px;
-//   margin-top      : 20px;
-// }
